@@ -123,7 +123,6 @@ void playgame (int board[HEIGHT][WIDTH], int numgeneration)
         checknewborns(board);
         newgeneration(board);
         printf ("Generation: %i\n", i);
-        printf ("Hit enter to move to the next generation\n");
         display(board);
     }
 }
