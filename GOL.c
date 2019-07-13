@@ -92,6 +92,8 @@ void checknewborns (int board[HEIGHT][WIDTH])
                 }
                 if ((neighbors == 3))
                     board[rows][cols] = 2; /*newborn*/
+                else if (neighbors >= 4)
+                    board[rows][cols] = 0; /*die*/
             }
         }
     }
