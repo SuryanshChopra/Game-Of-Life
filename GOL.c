@@ -53,9 +53,10 @@ void countneighbors (int board[HEIGHT][WIDTH])
             neighbors = 0;
             if (board[rows][cols] == 'O')
             {
-                for (a = -1; a <2; a++)
+                for (a = -1; a <2; a++)  # It will run a vertical search along the respective live cell
                 {
-                    for (b = -1; b <2; b++){
+                    for (b = -1; b <2; b++) # It will run a horizontal search along the respective live cell
+                    {
                         if (((rows +a) == rows) && ((cols +b) == cols))
                              neighbors = neighbors;
                         else if ((board[rows +a][cols +b] == 'O') ||(board[rows +a][cols +b] == 1) || (board[rows +a][cols +b] == 0))
@@ -81,9 +82,9 @@ void checknewborns (int board[HEIGHT][WIDTH])
             neighbors = 0;
             if (board[rows][cols] == ' ')
             {
-                for (a = -1; a <2; a++)
+                for (a = -1; a <2; a++) # It will run a vertical search along the respective dead cell
                 {
-                    for (b = -1; b <2; b++)
+                    for (b = -1; b <2; b++) # It will run a horizontal search along the respective live cell
                         if (((rows +a) == rows) && ((cols +b) == cols))
                             neighbors = neighbors;
                         else if ((board[rows +a][cols +b] == 'O') || (board[rows +a][cols +b] == 1) || (board[rows +a][cols +b] == 0))
@@ -104,11 +105,11 @@ void newgeneration (int board[HEIGHT][WIDTH])
         for (cols = 1; cols <WIDTH -1; cols ++)
         {
             if (board[rows][cols] == 1)
-                board[rows][cols] = 'O';
+                board[rows][cols] = 'O'; # Confirm live cell
             else if (board[rows][cols] == 2)
-                board[rows][cols] = 'O';
+                board[rows][cols] = 'O';  # Confirm newborn cell
             else if (board[rows][cols] == 0)
-                board[rows][cols] = ' ';
+                board[rows][cols] = ' ';  # Confirm dead cell
         }
     }
 }
