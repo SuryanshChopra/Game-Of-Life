@@ -15,3 +15,5 @@ RULES:-
 
 FOR MORE INFO ON HOW GAME OF LIFE WORKS PLEASE CHECK THE LINK BELOW:-
 https://www.youtube.com/watch?v=ouipbDkwHWA&list=WL&index=2&t=0s
+
+FOR CHECKING OUT MORE PATTERNS CLICK THIS LINK :-https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
